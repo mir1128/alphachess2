@@ -1,9 +1,9 @@
 import math
 import random
 
-from Board import Board
-from draw import draw
 from anytree import Node, RenderTree
+
+from Board import Board
 
 
 class TreeNode:
@@ -94,6 +94,9 @@ class TreeNode:
 
 
 class Mcts:
+
+    def __init__(self, model):
+        self.model = model
 
     @staticmethod
     def search(root: TreeNode, search_numbers):
