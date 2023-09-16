@@ -68,7 +68,7 @@ class GameUI(object):
                                 break
 
                             node = TreeNode.start_node(board)
-                            src, dst = Mcts.search(node, 1000)
+                            src, dst = Mcts.search(node, 100)
                             Mcts.draw_search_tree(node)
 
                             board = board.move(src, dst)

@@ -43,6 +43,10 @@ def create_chinese_chess_model():
     return Model(inputs=inputs, outputs=[policy, value])
 
 
+def load_model():
+    return create_chinese_chess_model()
+
+
 if __name__ == '__main__':
     model = create_chinese_chess_model()
     model.summary()

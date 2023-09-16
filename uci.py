@@ -42,6 +42,20 @@ def to_uci_label(src, dst):
     return uci_label
 
 
+def get_probability(src, dst, policy_pred):
+    # Convert the source and destination coordinates to a UCI label
+    uci_label = to_uci_label(src, dst)
+
+    # Create the UCI labels array
+    # Find the index of the UCI label in the labels array
+    label_index = uci_labels.index(uci_label)
+
+    # Get the probability from the policy prediction vector
+    probability = policy_pred[label_index]
+
+    return probability
+
+
 uci_labels = create_uci_labels()
 
 
